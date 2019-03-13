@@ -16,7 +16,7 @@ public class DigitalClock : MonoBehaviour
     private  DateTime time;
     public bool am;
     private  System.Timers.Timer aTimer;
-
+    public OptionsMenu OptionsMenu;
 
     private void Start()
     {
@@ -55,37 +55,40 @@ public class DigitalClock : MonoBehaviour
 
     private void OnTimedEvent(System.Object source, ElapsedEventArgs e)
     {
+        if (!OptionsMenu.GameIsPaused)
+        {
             minutes++;
             if (minutes > 59)
             {
                 minutes = 0;
                 hours++;
             }
-            if(hours == 12 && minutes == 0)
+            if (hours == 12 && minutes == 0)
             {
-            if (am)
-            {
-                am = false;
-            }
-            else
-            {
-                am = true;
-                day++;
-                if (day > 28)
+                if (am)
                 {
-                    day = 1;
-                    season++;
-                    if (season > 4)
+                    am = false;
+                }
+                else
+                {
+                    am = true;
+                    day++;
+                    if (day > 28)
                     {
-                        season = 1;
+                        day = 1;
+                        season++;
+                        if (season > 4)
+                        {
+                            season = 1;
+                        }
                     }
                 }
             }
-            }
-            if(hours > 12)
+            if (hours > 12)
             {
                 hours = 1;
             }
+        }
     }
 
     private void Update()
