@@ -2700,7 +2700,7 @@ GameObject:
   - component: {fileID: 937188608}
   - component: {fileID: 937188607}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: InventoryBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5014,7 +5014,7 @@ GameObject:
   - component: {fileID: 1879308646}
   - component: {fileID: 1879308645}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Clock,Date, and Shipping
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
