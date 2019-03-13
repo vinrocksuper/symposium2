@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public DigitalClock dc;
     public Text date;
+    public Text moneyDisplay;
+    public int money = 1000;
     void Update()
     {
 
@@ -22,6 +24,10 @@ public class GameManager : MonoBehaviour
             }
             
         }
+    }
+    private void FixedUpdate()
+    {
+        moneyDisplay.text = money + "G";
     }
     public void UpdateTime()
     {
