@@ -168,6 +168,7 @@ MonoBehaviour:
   day: 1
   season: 1
   am: 0
+  OptionsMenu: {fileID: 0}
 --- !u!114 &17943782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,7 +3070,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.056245685, y: -0.2822539}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3080,7 +3081,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.601139, y: 0.51549214}
+  m_Size: {x: 0.87, y: 1.08}
   m_EdgeRadius: 0
 --- !u!114 &663035493
 MonoBehaviour:
@@ -6260,6 +6261,7 @@ MonoBehaviour:
   day: 1
   season: 1
   am: 0
+  OptionsMenu: {fileID: 0}
 --- !u!1 &1474513115
 GameObject:
   m_ObjectHideFlags: 0

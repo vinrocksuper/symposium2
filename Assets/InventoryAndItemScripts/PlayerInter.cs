@@ -38,7 +38,7 @@ public class PlayerInter : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("interObject"))
+        if(other.CompareTag("interObject") && curInterObjScript.inventory)
         {
             if(other.gameObject == curInterObj)
             {
