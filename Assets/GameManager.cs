@@ -9,9 +9,18 @@ public class GameManager : MonoBehaviour
     public Text date;
     public Text moneyDisplay;
     public int money = 1000;
+    public OptionsMenu OptionsMenu;
+    public GameObject InventoryBar;
     void Update()
     {
-
+        if(OptionsMenu.GameIsPaused)
+        {
+            InventoryBar.SetActive(false);
+        }
+        else
+        {
+            InventoryBar.SetActive(true);
+        }
         if (dc.hours == 12 && dc.am && dc.minutes == 0)
         {
             if(dc.day< 10)
