@@ -11,24 +11,15 @@ public class GameManager : MonoBehaviour
     public int money = 1000;
     public OptionsMenu OptionsMenu;
     public GameObject InventoryBar;
-    public GameObject ShippingBin;
     void Update()
     {
-        if(OptionsMenu.GameIsPaused || ShippingBin.activeSelf)
+        if(OptionsMenu.GameIsPaused)
         {
             InventoryBar.SetActive(false);
         }
         else
         {
             InventoryBar.SetActive(true);
-        }
-        if(ShippingBin.activeSelf)
-        {
-            moneyDisplay.text = "";
-        }
-        else
-        {
-            FixedUpdate();
         }
         if (dc.hours == 12 && dc.am && dc.minutes == 0)
         {
