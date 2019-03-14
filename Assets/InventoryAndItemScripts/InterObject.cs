@@ -11,13 +11,8 @@ public class InterObject : MonoBehaviour
     public Inventory inv =null;
     public DigitalClock dc = null;
     public GameManager gm = null;
-<<<<<<< HEAD
     public GameObject UI;
     public string message;
-=======
-    public GameObject UI =null;
->>>>>>> 14769ba2e0f4fac9b948b31acdeca7481298d72c
-
     public void DoInter()
     {
         //Make item disappear
