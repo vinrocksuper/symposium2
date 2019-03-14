@@ -13,8 +13,14 @@ public class PlayerInter : MonoBehaviour
     {
         if(Input.GetButtonDown("Interact") && curInterObj)
         {
+            //Checks to see if object talks and has a message.
+            if (curInterObjScript.talks)
+            {
+                //Tells object to say its message
+                curInterObjScript.Talk();
+            }
             //Check to see if this object is to be stored in inventory
-            if(curInterObjScript.inventory)
+            if (curInterObjScript.inventory)
             {
                 inventory.AddItem(curInterObj);
                 curInterObj = null;
@@ -23,6 +29,8 @@ public class PlayerInter : MonoBehaviour
             {
                 curInterObjScript.DoInter();
             }
+            
+
         }
     }
 
